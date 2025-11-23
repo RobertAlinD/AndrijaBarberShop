@@ -10,49 +10,49 @@ export default function About() {
           <div className="row-about">
             <div className="row-about-box">
               <div className="row-about-title">
-                <span> Despre </span>
-                <h6>...</h6>
+                <h3>Chei Auto</h3>
+                <ul>
+                  <li>Programare, copiere și reparații</li>
+                  <li>Chei auto cu cip și telecomandă</li>
+                  <li>Compatibile cu majoritatea mărcilor</li>
+                </ul>
               </div>
-            </div>
-          </div>
-        </div>
-        <div className="row-about-images">
-          <div className="row-about-img-list">
-            <div className="row-about-img-gallery">
-              <div className="image-about">
-                <img
-                  src="./assets/imageabout1.jpeg"
-                  width={290}
-                  height={340}
-                />
-              </div>
-              <div className="image-about">
-                <img
-                  src="./assets/imageabout3.jpeg"
-                  width={290}
-                  height={340}
-                />
-              </div>
-              <div className="image-about">
-                <img
-                  src="./assets/imageabout2.jpeg"
-                  width={290}
-                  height={340}
-                />
-              </div>
-            </div>
 
-            <p>
-              Andrija Barbershop este un nou concept in lumea barbierilor si
-              Styling-ului, dedicat exclusiv barbatilor, care ofera atentie,
-              calitate si stil. Este situat in centrul Timisoarei si este
-              locul in care pasiunea a devenit demult meserie. Fie ca te
-              pregatești pentru un eveniment sau iti doresti un tuns clasic
-              sau o schimbare de look, ai ajuns in locul potrivit.
-            </p>
+              <div className="service-single">
+                <div className="icon-box-outer">
+                  <div className="icon-box-services">
+                    <div className="iconsvg">
+                      <img src="./assets/SmartKey2.png" alt="Smart Key" width="100" height="100" />
+                    </div>
+                  </div>
+                </div>
+                <h3>Smart Key LCD</h3>
+                <ul>
+                  <li>Chei inteligente cu ecran LCD</li>
+                  <li>Funcție Keyless Go</li>
+                  <li>Design modern pentru confort și siguranță</li>
+                </ul>
+              </div>
+
+              <div className="service-single">
+                <div className="icon-box-outer">
+                  <div className="icon-box-services">
+                    <div className="iconsvg">
+                      <img src="./assets/UnlockCar3.png" alt="Unlock Car" width="100" height="100" />
+                    </div>
+                  </div>
+                </div>
+                <h3>Deblocare Uși</h3>
+                <ul>
+                  <li>Intervenții rapide pentru uși blocate</li>
+                  <li>Fără deteriorări</li>
+                  <li>Disponibilitate 24/7</li>
+                </ul>
+              </div>
+
+            </div>
           </div>
         </div>
-        <div className="orizontalline1"></div>
       </section>
     </Layout>
   );

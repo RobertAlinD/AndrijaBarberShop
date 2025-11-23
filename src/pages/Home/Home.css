@@ -8,26 +8,18 @@ body {
 iframe#webpack-dev-server-client-overlay {
   display: none !important;
 }
-
 .banner-logo {
   position: relative;
-  top: 3rem;
+  top: 4rem;
   width: 100%;
-  background: url(/public/assets/bannerlogo.jpeg) no-repeat center;
-  background-size: cover;
-  padding: 70px 0 40px;
+  height: 92.5vh; 
+  background: url(/public/assets/Youtube\ cover.png) no-repeat center;
+  background-size: cover; 
+  background-size: 100% 95%; 
+
 }
 
-.banner-logo::before {
-  content: "";
-  display: block;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  margin-top: -70px;
-  background: rgba(0, 0, 0, 0.3);
-  backdrop-filter: blur(1px);
-}
+
 
 .main-logo {
   position: relative;
@@ -140,18 +132,15 @@ iframe#webpack-dev-server-client-overlay {
   text-decoration: none;
   color: white;
 }
-p:hover {
-  color: #ffa600;
-}
 
 .banner-icon-box {
   display: block;
   position: absolute;
   left: 50%;
-  bottom: -40px;
-  margin-left: -40px;
-  width: 80px;
-  height: 80px;
+  bottom: -30px;
+  margin-left: -50px;
+  width: 95px;
+  height: 95px;
   background: #fff;
   font-size: 4px;
   text-align: center;
@@ -173,10 +162,25 @@ p:hover {
 
   /* ABOUT SECTION START */
 }
+
+.banner-key-image {
+  width: 100px; /* Ajustează dimensiunea dorită */
+  height: auto; /* Păstrează proporțiile imaginii */
+  display: block; /* Asigură o afișare corectă */
+  margin: 0 auto; /* Centrează imaginea în container */
+  transform: scale(1.2) rotate(315deg);
+}
+
 .aboutus {
-  padding: 70px 0 0px 0px;
-  display: block;
-  background: #212121;
+  aboutus {
+    padding: 80px 0px 0px;
+    display: block;
+    background: #212121;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url(http://localhost:3000/static/media/LOGOBG.f030bce….png);
+    background-position: center;
+    background-repeat: repeat;
+    background-attachment: fixed;
+  }
 }
 .container-about {
   width: 100%;
@@ -195,7 +199,7 @@ p:hover {
 
 @keyframes glow {
   to {
-    text-shadow: 0 0 20px #014d55, 0 0 10px rgba(255, 255, 255, 0.4),
+    text-shadow: 0 0 20px #59b8f4, 0 0 10px rgba(255, 255, 255, 0.4),
       0 0 30px rgba(255, 255, 255, 0.2);
   }
 }
@@ -222,7 +226,7 @@ h6 {
   margin-top: 0px;
   line-height: 0;
   text-align: center;
-  color: #014d55;
+  color: #0177a9;
   text-shadow: -1px -1px 0 #ffa600, 1px -1px 0 #ffa600, -1px 1px 0 #ffa600,
     1px 1px 0 #ffa600;
 }
@@ -249,17 +253,19 @@ h6 {
   display: block;
   position: absolute;
   width: 100%;
-  height: 90%;
-  margin-top: -50px;
+  height: 68%;
+  margin-top: 0px;
   background: rgba(0, 0, 0, 0.2);
   transition: opacity 0.3s ease;
+  box-shadow: 0 0 15px 0.1px white; /* umbra alba */
+
 }
 .image-about:hover:before {
   opacity: 0;
 }
 
 .image-about:nth-of-type(2) {
-  transform: translateY(-20px);
+  transform: translateY(0px);
   transition: transform 0.3s ease;
 }
 
@@ -269,13 +275,11 @@ h6 {
 
 .row-about-images p {
   font-family: SANS-SERIF;
-  font-size: 20px;
   color: #ffffff;
-  text-align: center;
   line-height: 1.5em;
   margin-top: 0;
-  padding-left: 20%;
-  padding-right: 20%;
+  padding-left: 5%;
+  padding-right: 5%;
   display: inline-block;
 }
 /* ABOUT SECTION END  */
@@ -303,7 +307,7 @@ h6 {
 
 @keyframes glow {
   to {
-    text-shadow: 0 0 20px #014d55, 0 0 10px rgba(255, 255, 255, 0.4),
+    text-shadow: 0 0 20px #59b8f4, 0 0 10px rgba(255, 255, 255, 0.4),
       0 0 30px rgba(255, 255, 255, 0.2);
   }
 }
@@ -383,7 +387,6 @@ h6 {
 }
 
 .service-single p {
-  text-transform: uppercase;
   color: #fff;
   font-weight: 600;
   font-size: 14px;
@@ -392,15 +395,27 @@ h6 {
 }
 
 .service-single h5 {
-  font-size: 20px;
-  display: inline-block;
+  font-size: 16px;
   background: #ffa600;
-  text-transform: uppercase;
-  padding: 14px 20px 10px;
+  padding: 10px 15px;
   color: #fff;
   margin-top: 10px;
+  display: inline-block;
+}
+
+.service-single ul {
+  list-style: none; /* Elimină bulinele */
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.1); /* Fundal ușor alb transparent */
+  backdrop-filter: blur(5px); /* Efect subtil de blur */
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Umbră subtilă */
+}
+
+.service-single ul li {
   font-size: 16px;
-  padding: 10px 15px 7px;
+  color: #fff;
+  padding: 5px 0;
 }
 
 .service-single .icon-box-services .icon-box-outer {
@@ -415,8 +430,13 @@ h6 {
 
 .gallery {
   padding: 70px 0 0px 0;
-  background-color: #212121;
   height: 105vh;
+  background: #212121;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url(/public/assets/LOGOBG.png);  
+  background-position: center;
+  background-repeat: repeat;
+  background-attachment: fixed;
+    
 }
 
 .container-gallery {
@@ -434,7 +454,7 @@ h6 {
 
 @keyframes glow {
   to {
-    text-shadow: 0 0 20px #014d55, 0 0 10px rgba(255, 255, 255, 0.4),
+    text-shadow: 0 0 20px #59b8f4, 0 0 10px rgba(255, 255, 255, 0.4),
       0 0 30px rgba(255, 255, 255, 0.2);
   }
 }
@@ -451,9 +471,7 @@ h6 {
   text-align: center;
   margin-bottom: 0px;
 }
-.row-gallery-title {
-  background-color: #212121;
-}
+
 .orizontalline1 {
   width: 99.7%;
   height: 3px;
@@ -511,7 +529,7 @@ h6 {
 
 @keyframes glow {
   to {
-    text-shadow: 0 0 20px #014d55, 0 0 10px rgba(255, 255, 255, 0.4),
+    text-shadow: 0 0 20px #5ab9ef, 0 0 10px rgba(255, 255, 255, 0.4),
       0 0 30px rgba(255, 255, 255, 0.2);
   }
 }
@@ -534,17 +552,17 @@ h6 {
   margin-left: -15px;
 }
 .row-prices-list img {
-  width: 130px;
-  height: 130px;
-  padding-left: 220px;
-  padding-bottom: 100px;
-  transform: perspective(500px) scale(1.5);
-  transition: transform 0.5s ease;
+  width: 300px;
+  height: 300px;
+  left: 50%;
+  margin-top: 80px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
 .row-prices-list img:hover {
-  transform: perspective(500px) scale(2);
+  transform: translateY(-40px);
 }
+
 .row-prices-img {
   width: 35%;
   float: left;
@@ -566,10 +584,7 @@ img {
   vertical-align: middle;
   border: 0;
 }
-.prices-list-details {
-  max-width: 70%;
-  margin: 0 auto 10px;
-}
+
 .price-item {
   font-size: 20px;
   text-transform: uppercase;
@@ -600,10 +615,7 @@ img {
   width: 50%;
   float: left;
   position: relative;
-  min-height: 1px;
-  padding-right: auto;
-  padding-left: auto;
-  padding-top: 40px;
+  margin-top: -50px;
 }
 /* PRICES SECTION END */
 
@@ -619,16 +631,16 @@ img {
 }
 
 /* CONTACT SECTION START */
+
+
 .contact {
-  overflow: hidden;
-  padding: 180px 0;
+  padding: 180px 0px 0px;
   display: block;
-  background-color: #212121;
-  height: 60vh;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0)),
-    url(/public/assets/backcontactimg.png);
-  background-size: cover;
-  box-shadow: 0 0 10px;
+  background: #212121;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url(/public/assets/LOGOBG.png);
+  background-position: center;
+  background-repeat: repeat;
+  background-attachment: fixed;
 }
 
 .container-contact {
@@ -688,7 +700,7 @@ img {
   width: 35px;
   height: 35px;
   border-radius: 50%;
-  background-color: #ffa600;
+  background-color: #5ce2e5;
   text-align: center;
 }
 .icon.social svg {
@@ -707,12 +719,12 @@ img {
   margin-right: 10px;
 }
 .largebox-contact {
-  padding: 0px 50px 20px 150px;
+  padding: 0px 50px 20px 250px;
 }
 .map-container {
   float: right;
-  margin-right: 50px;
-  margin-top: -400px;
+  margin-right: 150px;
+  margin-top: -410px;
   border-radius: 10px;
   box-shadow: 0 0 80px rgba(0, 0, 0, 0.9);
   position: relative;
@@ -733,7 +745,7 @@ h1 {
 .map-container h1 {
   position: absolute;
   top: -50px;
-  left: 30px;
+  left: 50px;
   margin: 10px;
   color: rgb(255, 255, 255);
 }
@@ -761,42 +773,235 @@ h1 {
 /* MOBILE SECTION  */
 
 @media (max-width: 768px) {
-  .main-logo p {
-    font-size: 30px;
+  @media (max-width: 768px) {
+    .aboutus {
+      padding: 40px 0 0;
+      background-attachment: scroll; /* Evită probleme cu fixed pe mobil */
+    }
+    .service-single {
+      margin-top: 0;
+      margin-bottom: 0;
+      margin-left: 45px;
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+    
+    /* Doar primul element să coboare mai jos */
+    .service-single:first-child {
+      margin-top: 60px; /* ajustează după cât vrei să coboare */
+    }
+    
+  
+    .row-about-title span {
+      font-size: 24px;
+      letter-spacing: 0.1em;
+    }
+  
+    h6 {
+      font-size: 40px;
+      line-height: 1;
+    }
+  
+    .row-about-img-gallery {
+      display: flex;
+      flex-wrap: wrap; /* permite trecerea pe rândul următor */
+      justify-content: center;
+      gap: 10px; /* spațiu între imagini */
+      height: auto;
+      padding-top: 20px;
+    }
+  
+    .image-about {
+      width: 45%; /* două pe rând */
+      height: auto;
+      margin-bottom: 10px;
+      transform: none !important; /* elimină offset-urile */
+    }
+  
+    .image-about:hover {
+      transform: scale(1.05);
+    }
+
+    .image-about:before {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      margin-top: 0px;
+      background: rgba(0, 0, 0, 0.2);
+      transition: opacity 0.3s ease;
+      box-shadow: 0 0 15px 0.1px white
+    }
+  
+    .text-box {
+      max-width: 90%;
+      margin-top: 20px;
+      padding: 15px;
+      font-size: 14px;
+    }
+  
+    p {
+      font-size: 14px;
+      padding-left: 5%;
+      padding-right: 5%;
+      margin-top: 0;
+    }
+  }
+  .container-about {
+    width: 100%;
+    height: 4rem;
+    margin-top: 40px;
+    margin-right: auto;
+    margin-left: auto;
+}
+@media (max-width: 768px) {
+
+  .react-players {
+    display: flex;
+    flex-direction: column;   /* una sub alta */
+    align-items: center;
+    position: static;         /* oprește suprapunerile */
   }
 
-  .main-logo h3 {
+  .react-player1,
+  .react-player2 {
+    display: none;
+    position: static;         /* dezactivează poziția absolute */
+    transform: none;          /* reset transform */
+    margin-top: 80px;         /* spațiu între ele */
+    width: 100% !important;   /* ocupă toată lățimea */
+    max-width: 350px;         /* dimensiune bună pentru mobil */
+  }
+
+  .react-player1::before,
+  .react-player2::before {
+    display: none;            /* umbrele dispar pe mobil (altfel se strică layout-ul) */
+  }
+
+  .carousel-container {
+    max-width: 550px;
+    margin: 40px auto;
+    position: relative;
+    margin-top: -130px;
+
+  }
+  
+  .carousel-slide {
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 35px;
+  }
+  
+  .carousel-image {
+    max-width: 100%;
+    max-height: 550px;
+    object-fit: contain;
+    display: block;
+    margin-top: 60px;
+    background-color: #000; /* opțional */
+    border-radius: 12px;
+    box-shadow: 0 0 15px 0.1px white;
+  }
+  .slick-dots {
+    bottom: 10px;
+  }
+  
+  .slick-dots li {
+    margin: 0 5px;
+  }
+  
+  .slick-dots li button {
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    color: white;
+  }
+  
+  .slick-dots li button:before {
+    font-family: "slick";
+    font-size: 8px;
+    line-height: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    content: "•";
+    text-align: center;
+    opacity: 0.85;
+    color: #ffffff;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }  
+  .map-container {
+    float: right;
+    margin-left: -40px;
     margin-top: 50px;
-  }
+    border-radius: 10px;
+    box-shadow: 0 0 80px rgba(0, 0, 0, 0.9);
+    position: relative;
+    text-align: center;
+}
+.contact-info-title h1 {
+  position: relative;
+  transform: translate(-2%, -350%);
+  margin: 0;
+  color: rgb(255, 255, 255);
+}
+.largebox-contact {
+  margin-top: -60px;
+}
+.map-container h1 {
+  position: absolute;
+  top: -50px;
+  left: 80px;
+  margin: 10px;
+  color: rgb(255, 255, 255);
+}
 
-  .rows-main {
-    display: flex;
-    flex-direction: column;
+.map-frame {
+  border: 0;
+  border-radius: 10px;
+  width: 350px;
+  height: 350px;
+}
+.contact {
+  padding: 100px 0px 0px;
+  display: block;
+  background: #212121;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url(http://localhost:3000/static/media/LOGOBG.f030bce….png);
+  background-position: center;
+  background-repeat: repeat;
+  background-attachment: fixed;
+}
+@media (max-width: 768px) {
+  .banner-logo {
+      height: 40vh; /* scazi înălțimea pentru ecranele mici */
+      background-position: center;
   }
+}
 
-  .rows-program,
-  .rows-location,
-  .rows-rezervation {
-    width: 100%;
-    padding-left: 0px;
+@media (max-width: 480px) {
+  .banner-logo {
+      height: 35vh;
   }
+}
+.banner-icon-box {
+  display: block;
+  position: absolute;
+  left: 50%;
+  bottom: -40px;
+  margin-left: -50px;
+  width: 95px;
+  height: 95px;
+  background: #fff;
+  font-size: 4px;
+  text-align: center;
+  transform: rotate(45deg);
+}
 
-  .icon-box {
-    display: inline-block;
-    margin-right: 10px;
-    margin-right: 0;
-    margin-bottom: 10px;
-  }
-  .rows-info > p {
-    display: flex;
-    width: 100%;
-    font-size: small;
-  }
-  h6 {
-    padding-left: 15px;
-  }
+
+}
 }

@@ -89,7 +89,7 @@ export default function Footer() {
                   rel="noopener"
                   a="true"
                 >
-                  Strada Coriolan Brediceanu 2, Timișoara 300077
+                  Strada Petre Tutea, Dumbravita, Timis.
                 </a>{" "}
               </div>
               <div className="box-contact-info">
@@ -100,7 +100,7 @@ export default function Footer() {
             <div className="box-contact-solcialmedia">
               <div className="box-contact-icofb">
                 <a
-                  href="https://www.facebook.com/andrija.radevici"
+                  href="https://www.facebook.com/CheiAutoSolutionTimisoara"
                   className="social icon"
                   target="_blank"
                   rel="noopener"
@@ -117,7 +117,7 @@ export default function Footer() {
               </div>
               <div className="box-contact-icoinst">
                 <a
-                  href="https://www.instagram.com/radevici_andrija"
+                  href="https://www.instagram.com/chei_auto_solution_timisoara/"
                   className="social icon"
                   target="_blank"
                   rel="noopener"

@@ -3,6 +3,12 @@
   padding: 80px 0px 0px;
   display: block;
   background: #212121;
+  background-image: 
+  linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)),
+    url(/public/assets/LOGOBG.png); /* imaginea de fundal */
+  background-position: center;
+  background-repeat:repeat;
+  background-attachment: fixed;
 }
 
 .container-about {
@@ -22,7 +28,7 @@
 
 @keyframes glow {
   to {
-    text-shadow: 0 0 20px #014d55, 0 0 10px rgba(255, 255, 255, 0.4),
+    text-shadow: 0 0 20px #5ab9ef, 0 0 10px rgba(255, 255, 255, 0.4),
       0 0 30px rgba(255, 255, 255, 0.2);
   }
 }
@@ -37,21 +43,20 @@
   font-family: "Josefin Sans", sans-serif;
   margin-bottom: 10px;
   line-height: 1.1;
-  text-align: center;
+  text-align: center; 
   margin-bottom: 0px;
   transition: transform 0.3s ease-in-out;
 }
 
 h6 {
-  font-size: 80px;
+  font-size: 90px;
   letter-spacing: 0.1em;
-  margin-top: 10px;
   margin-top: 0px;
   line-height: 0;
   text-align: center;
-  color: #014d55;
-  text-shadow: -1px -1px 0 #ffa600, 1px -1px 0 #ffa600, -1px 1px 0 #ffa600,
-    1px 1px 0 #ffa600;
+  color: #4ccfd2;
+  text-shadow: -1px -1px 0 #c95c2f, 1px -1px 0 #c95c2f, -1px 1px 0 #c95c2f,
+    1px 1px 0 #c95c2f;
 }
 
 .row-about-img-gallery {
@@ -62,14 +67,17 @@ h6 {
 }
 
 .image-about {
-  width: 270px;
   height: auto;
   position: relative;
   transition: transform 0.3s ease;
+  
+  
+
 }
 
 .image-about:hover {
   transform: scale(1.1);
+
 }
 
 .image-about:before {
@@ -77,69 +85,140 @@ h6 {
   display: block;
   position: absolute;
   width: 100%;
-  height: 90%;
-  margin-top: -50px;
+  height: 68%;
+  margin-top: -15px;
   background: rgba(0, 0, 0, 0.2);
   transition: opacity 0.3s ease;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+
 }
 
-.image-about:hover:before {
-  opacity: 0;
-}
-
-.image-about:nth-of-type(2) {
+.image-about:nth-of-type(1) {
   transform: translateY(-20px);
   transition: transform 0.3s ease;
 }
 
-.image-about:nth-of-type(2):hover {
+.image-about:nth-of-type(1):hover {
   transform: scale(1.1) translateY(-20px);
 }
+.image-about:nth-of-type(2) {
+  transform: translateY(0px);
+  transition: transform 0.3s ease;
+}
 
-.row-about-images p {
-  font-family: SANS-SERIF;
-  font-size: 20px;
+.image-about:nth-of-type(2):hover {
+  transform: scale(1.1) translateY(0px);
+} 
+
+.image-about:nth-of-type(4) {
+  transform: translateY(-20px);
+  transition: transform 0.3s ease;
+}
+
+.image-about:nth-of-type(4):hover {
+  transform: scale(1.1) translateY(-20px);
+} 
+
+.text-box {
+  max-width: 75%;
+  padding-top: 20px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  color: #fff;
+  line-height: 1.6;
+  font-family: "Montserrat", sans-serif;
+  margin-top: -80px;
+  margin-bottom: 120px;
+
+}
+
+
+p {
+  font-family: sans-serif;
+  font-size: 18px;
   color: #ffffff;
-  text-align: center;
   line-height: 1.5em;
-  margin-top: 0;
-  padding-left: 20%;
-  padding-right: 20%;
+  margin-top: -60px;
+  padding-left: 15%;
+  padding-right: 15%;
   display: inline-block;
+  white-space: pre-line; /* Păstrează formatul listelor */
+}
+
+p span {
+  display: block;
+  margin-top: 10px; /* Spațiere între elementele listei */
+  color: #ffffff;
+}
+
+.banner-icon-box {
+  display: block;
+  position: absolute;
+  left: 50%;
+  bottom: -30px;
+  margin-left: -50px;
+  width: 95px;
+  height: 95px;
+  background: #fff;
+  font-size: 4px;
+  text-align: center;
+  transform: rotate(45deg);
 }
 
 /* MOBILE SECTION  */
 @media (max-width: 768px) {
+@media (max-width: 768px) {
+  .aboutus {
+    padding: 40px 0 0;
+    background-attachment: scroll; /* Evită probleme cu fixed pe mobil */
+  }
+
+
+  .row-about-title span {
+    font-size: 24px;
+    letter-spacing: 0.1em;
+  }
+
+  h6 {
+    font-size: 40px;
+    line-height: 1;
+  }
+
   .row-about-img-gallery {
-    margin-top: -50px;
+    display: flex;
+    flex-wrap: wrap; /* permite trecerea pe rândul următor */
+    justify-content: center;
+    gap: 10px; /* spațiu între imagini */
     height: auto;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 20px;
+    padding-top: 20px;
   }
 
   .image-about {
-    width: 90%;
-    max-width: 300px;
-    padding: 20px;
-    background: rgba(255, 255, 255, 0.07);
-    border: 1px solid black;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+    width: 45%; /* două pe rând */
+    height: auto;
+    margin-bottom: 10px;
+    transform: none !important; /* elimină offset-urile */
   }
 
   .image-about:hover {
-    transform: scale(1.05); /* Efect de zoom la hover */
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4); /* Umbră mai puternică la hover */
+    transform: scale(1.05);
   }
 
-  .image-about:before {
-    display: none;
-  }
-  img {
-    margin-left:5px;
+  .text-box {
+    max-width: 90%;
+    margin-top: 20px;
+    padding: 15px;
+    font-size: 14px;
   }
 
-.image-about:nth-of-type(2) {
-  margin-top: 40px;
+  p {
+    font-size: 14px;
+    padding-left: 5%;
+    padding-right: 5%;
+    margin-top: 0;
+  }
 }
+
 }

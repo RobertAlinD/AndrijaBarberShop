@@ -8,24 +8,13 @@ body {
 iframe#webpack-dev-server-client-overlay {
   display: none !important;
 }
+
 .banner-logo {
   position: relative;
-  top: 0px;
+  top: 4rem;
   width: 100%;
-  background: url(/public/assets/bannerlogo.jpeg) no-repeat center;
-  background-size: cover;
-  padding: 70px 0 40px;
-}
-
-.banner-logo::before {
-  content: "";
-  display: block;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  margin-top: -70px;
-  background: rgba(0, 0, 0, 0.3);
-  backdrop-filter: blur(3px);
+  height: auto;
+  background: url(/public/assets/Youtube\ cover.png);
 }
 
 .main-logo {
@@ -147,9 +136,6 @@ iframe#webpack-dev-server-client-overlay {
   text-decoration: none;
   color: white;
 }
-p:hover {
-  color: #ffa600;
-}
 
 .banner-icon-box {
   display: block;
@@ -181,7 +167,7 @@ p:hover {
   /* ABOUT SECTION START */
 }
 .aboutus {
-  padding: 100px 0 0px 0px;
+  padding: 100px 0 0px 80px;
   display: block;
   background: #212121;
 }
@@ -202,7 +188,7 @@ p:hover {
 
 @keyframes glow {
   to {
-    text-shadow: 0 0 20px #014d55, 0 0 10px rgba(255, 255, 255, 0.4),
+    text-shadow: 0 0 20px #59b8f4, 0 0 10px rgba(255, 255, 255, 0.4),
       0 0 30px rgba(255, 255, 255, 0.2);
   }
 }
@@ -258,7 +244,7 @@ h6 {
   position: absolute;
   width: 100%;
   height: 90%;
-  margin-top: -50px;
+  margin-top: -40px;
   background: rgba(0, 0, 0, 0.2);
   transition: opacity 0.3s ease;
 }
@@ -266,26 +252,157 @@ h6 {
   opacity: 0;
 }
 
-.image-about:nth-of-type(2) {
+.image-about:nth-of-type(1) {
+  transform: translateY(-40px);
+  transition: transform 0.3s ease;
+}
+
+.image-about:nth-of-type(1):hover {
+  transform: scale(1.1) translateY(-40px);
+}
+
+.image-about:nth-of-type(4) {
   transform: translateY(-20px);
   transition: transform 0.3s ease;
 }
 
-.image-about:nth-of-type(2):hover {
+.image-about:nth-of-type(4):hover {
   transform: scale(1.1) translateY(-20px);
 }
-
-.row-about-images p {
-  font-family: SANS-SERIF;
+p {
+  font-family: sans-serif;
   font-size: 20px;
   color: #ffffff;
-  text-align: center;
   line-height: 1.5em;
   margin-top: 0;
-  padding-left: 20%;
-  padding-right: 20%;
+  padding-left: 10%;
+  padding-right: 10%;
   display: inline-block;
+  white-space: pre-line; /* Păstrează formatul listelor */
 }
+
+p span {
+  display: block;
+  margin-top: 10px; /* Spațiere între elementele listei */
+}
+
+.banner-icon-box2 {
+display: block;
+position: absolute;
+left: 50%;
+bottom: -846px;
+margin-left: -50px;
+width: 95px;
+height: 95px;
+background: #fff;
+font-size: 4px;
+text-align: center;
+transform: rotate(45deg);
+z-index: 8;
+}
+
+
+
+.banner-icon-small2 {
+  transform: rotate(415deg);
+  padding: 0px 0px 400px 160px;
+}
+
+.banner-key-image2 {
+transform: scale(1.3) rotate(315deg); /* scalare și rotire */
+margin-top: -65px;
+margin-left: -12px;
+width: 100px;
+height: auto;
+display: block;
+position: relative;
+top: 30px;
+
+}
+
+@media only screen and (max-width: 768px) {
+  .banner-icon-box2 {
+    position: absolute;
+    top: 4585px; /* Ajustează această valoare */
+    left: 50%; /* Centrare orizontală */
+    transform:rotate(45deg); /* Corectează centrare și rotația */
+    width: 95px;
+    height: 95px;
+    background: #fff;
+    font-size: 4px;
+    text-align: center;
+    z-index: 8;
+  }
+}
+.banner-icon-box3 {
+  display: block;
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  margin-left: -50px;
+  width: 100px;
+  height: 100px;
+  background: #fff;
+  text-align: center;
+  transform: rotate(45deg);
+  z-index: 8;
+  }
+  
+  .banner-key-image3 {
+  transform: scale(1.7) rotate(119deg); /* scalare și rotire */ 
+  left: 20px;
+  bottom: -13px;
+  width: 100px;
+  height: auto;
+  display: block;
+  position: relative;
+  
+  }
+  
+
+.banner-icon-box4 {
+  
+  margin-top: -600px;
+  display: block;
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  margin-left: -50px;
+  width: 100px;
+  height: 100px;
+  background: #fff;
+  text-align: center;
+  transform: rotate(45deg);
+  z-index: 8;
+  }
+  
+  .banner-key-image4 {
+  transform: scale(2.2) rotate(311deg); /* scalare și rotire */ 
+  bottom: -25px;
+  width: 100px;
+  height: auto;
+  display: block;
+  position: relative;
+  
+  }
+
+  
+  @media only screen and (max-width: 768px) {
+    .banner-icon-box4 {
+      position: absolute;
+      top: 2580px; /* Ajustează această valoare */
+      left: 50%; /* Centrare orizontală */
+      transform:rotate(45deg); /* Corectează centrare și rotația */
+      width: 95px;
+      height: 95px;
+      background: #fff;
+      font-size: 4px;
+      text-align: center;
+      z-index: 8;
+    }
+    
+  
+  }
 /* ABOUT SECTION END  */
 /* SERVICES SECTION START */
 
@@ -312,7 +429,7 @@ h6 {
 
 @keyframes glow {
   to {
-    text-shadow: 0 0 20px #014d55, 0 0 10px rgba(255, 255, 255, 0.4),
+    text-shadow: 0 0 20px #5ab9ef, 0 0 10px rgba(255, 255, 255, 0.4),
       0 0 30px rgba(255, 255, 255, 0.2);
   }
 }
@@ -402,15 +519,28 @@ h6 {
 }
 
 .service-single h5 {
-  font-size: 20px;
-  display: inline-block;
+  font-size: 16px;
   background: #ffa600;
-  text-transform: uppercase;
-  padding: 14px 20px 10px;
+  padding: 10px 15px;
   color: #fff;
   margin-top: 10px;
+  display: inline-block;
+  
+}
+
+.service-single ul {
+  list-style: none; /* Elimină bulinele */
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.1); /* Fundal ușor alb transparent */
+  backdrop-filter: blur(5px); /* Efect subtil de blur */
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Umbră subtilă */
+}
+.service-single ul li {
   font-size: 16px;
-  padding: 10px 15px 7px;
+  color: #fff;
+  padding: 5px;
+  
 }
 
 @media screen and (max-width: 768px) {
@@ -448,7 +578,7 @@ h6 {
 
 @keyframes glow {
   to {
-    text-shadow: 0 0 20px #014d55, 0 0 10px rgba(255, 255, 255, 0.4),
+    text-shadow: 0 0 20px #59b8f4, 0 0 10px rgba(255, 255, 255, 0.4),
       0 0 30px rgba(255, 255, 255, 0.2);
   }
 }
@@ -465,9 +595,7 @@ h6 {
   text-align: center;
   margin-bottom: 0px;
 }
-.row-gallery-title {
-  background-color: #212121;
-}
+
 .orizontalline1 {
   width: 99.7%;
   height: 3px;
@@ -487,48 +615,11 @@ h6 {
   margin-top: 60px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 10);
 }
-
 /* CAROUSEL SECTION START */
-.slick-slider {
-  width: 25%;
-  margin: -90px auto;
-  position: relative;
-  box-shadow: 30px 60px 20px rgba(0, 0, 0, 0.9);
-}
 
-.slick-dots {
-  bottom: 10px;
-}
 
-.slick-dots li {
-  margin: 0 15px;
-}
 
-.slick-dots li button {
-  border-radius: 50%;
-  width: 20px;
-  height: 20px;
-  color: white;
-}
-.slick-slide img {
-  width: 100%;
-}
-.slick-dots li button:before {
-  font-family: "slick";
-  font-size: 8px;
-  line-height: 20px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 20px;
-  height: 20px;
-  content: "•";
-  text-align: center;
-  opacity: 0.85;
-  color: #ffa600;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+
 /* CAROUSEL SECTION END */
 /* PLAYER SECTION START */
 .react-players {
@@ -539,32 +630,31 @@ h6 {
 
 .react-player1 {
   position: absolute;
-  top: 70%;
-  left: 18%;
+  left: 23%;
   transform: translate(-50%, -50%);
   margin-top: 70px;
 }
 
 .react-player2 {
   position: absolute;
-  top: 70%;
-  right: 18%;
+  right: 23%;
   transform: translate(50%, -50%);
   margin-top: 70px;
 }
 
-.react-player2::before,
-.react-player1::before {
+.react-player1::before,
+.react-player2::before {
   content: "";
   display: block;
   position: absolute;
   width: 100%;
-  height: 120%;
-  margin-top: -30px;
+  height: 95%;
+  margin-top: 20px;
   background: rgba(0, 0, 0, 0.2);
-  border: 2px black solid;
-  box-shadow: 30px 60px 20px rgba(0, 0, 0, 0.9);
+  box-shadow: 0 0 15px 1px white; /* umbra alba */
+  z-index: -1;
 }
+
 /* PLAYER SECTION END */
 /* GALLERY SECTION END */
 /* PRICES SECTION START */
@@ -602,7 +692,7 @@ h6 {
 
 @keyframes glow {
   to {
-    text-shadow: 0 0 20px #014d55, 0 0 10px rgba(255, 255, 255, 0.4),
+    text-shadow: 0 0 20px #59b8f4, 0 0 10px rgba(255, 255, 255, 0.4),
       0 0 30px rgba(255, 255, 255, 0.2);
   }
 }
@@ -625,17 +715,18 @@ h6 {
   margin-left: -15px;
 }
 .row-prices-list img {
-  width: 130px;
-  height: 130px;
-  padding-left: 220px;
-  padding-bottom: 100px;
-  transform: perspective(500px) scale(1.5);
-  transition: transform 0.5s ease;
+  width: 200px;
+  height: 200px;
+  margin-left: 30%;
+  margin-top: -130px;
+  animation: levitate 1s infinite ease-in-out alternate; /* Animație continuă */
 }
 
 .row-prices-list img:hover {
-  transform: perspective(500px) scale(2);
+  transform: translateY(-40px);
 }
+
+
 .row-prices-img {
   width: 35%;
   float: left;
@@ -692,9 +783,7 @@ img {
   float: left;
   position: relative;
   min-height: 1px;
-  padding-right: auto;
-  padding-left: auto;
-  padding-top: 40px;
+  margin-top: -50px; /* Ridică secțiunea mai sus */
 }
 /* PRICES SECTION END */
 /* CONTACT SECTION START  */
@@ -710,16 +799,15 @@ img {
   margin-left: 110px;
 }
 
+
 .contact {
-  overflow: hidden;
-  padding: 180px 0;
-  display: flex;
-  background-color: #212121;
-  height: 60vh;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0)),
-    url(/public/assets/backcontactimg.png);
-  background-size: cover;
-  box-shadow: 0 0 10px;
+  padding: 180px 0px 0px;
+  display: block;
+  background: #212121;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url(/public/assets/LOGOBG.png);
+  background-position: center;
+  background-repeat: repeat;
+  background-attachment: fixed;
 }
 
 .container-contact {
@@ -745,7 +833,7 @@ img {
 
 @keyframes glow {
   to {
-    text-shadow: 0 0 20px #014d55, 0 0 10px rgba(255, 255, 255, 0.4),
+    text-shadow: 0 0 20px #59b8f4, 0 0 10px rgba(255, 255, 255, 0.4),
       0 0 30px rgba(255, 255, 255, 0.2);
   }
 }

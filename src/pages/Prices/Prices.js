@@ -19,7 +19,7 @@ export default function Preturi() {
             <div className="row-prices">
               <div className="row-prices-img">
                 <div className="prices-img">
-                  <img src="./assets/imgprices.jpeg" />
+                  <img src="./assets/DeblocariAuto.jpeg" />
                 </div>
               </div>
               <div className="row-prices-list">

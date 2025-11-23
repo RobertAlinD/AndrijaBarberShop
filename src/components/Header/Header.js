@@ -3,9 +3,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faFacebook,
   faInstagram,
+  faTiktok,
   faWhatsapp,
 } from "@fortawesome/free-brands-svg-icons";
-import ReactWhatsapp from "react-whatsapp";
 import { Link } from "react-router-dom";
 
 import "./Header.css";
@@ -18,7 +18,7 @@ const Header = () => {
     setMenuOpen(!isMenuOpen);
   };
 
-  // Handle click outside the menu to close it
+  // Close menu when clicking outside
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (menuRef.current && !menuRef.current.contains(event.target)) {
@@ -33,67 +33,84 @@ const Header = () => {
   }, [menuRef]);
 
   return (
-    <header>
-      <nav ref={menuRef} className={`nav ${isMenuOpen ? "active" : ""}`}>
-        <div className="navbar-logo-box">
-          <img src="./assets/navlogogreen.png" alt="Logo" />
-        </div>
-        <div className={`nav ${isMenuOpen ? "active" : ""}`}>
-          <button id="navToggleBtn" className="nav-toggle" onClick={toggleMenu}>
-            <div className="bar"></div>
-            <div className="bar"></div>
-            <div className="bar"></div>
-            <div className="bar"></div>
-          </button>
-
-          <div className="nav-items">
-            <Link to="/home">Home</Link>
-            <Link to="/despre">Despre</Link>
-            <Link to="/servicii">Servicii</Link>
-            <Link to="/galerie">Galerie</Link>
-            <Link to="/preturi">Preturi</Link>
-            <Link to="/contact">Contact</Link>
-
-            <div className="bookingnav">
-              <Link to="/Calendar">
-                <b>Programeaza-te ✂️</b>
-              </Link>
-            </div>
+    <>
+      <header>
+        <nav ref={menuRef} className={`nav ${isMenuOpen ? "active" : ""}`}>
+          <div className="navbar-logo-box">
+            <img src="./assets/logopageleft.png" alt="Logo" />
           </div>
-        </div>
 
-        <div className="social-container">
-          <a
-            href="https://www.facebook.com/andrija.radevici"
-            className="facebookbesocial"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FontAwesomeIcon icon={faFacebook} />
-          </a>
-          <a
-            href="https://www.instagram.com/radevici_andrija?utm_source=ig_web_button_share_sheet&igsh=OGQ5ZDc2ODk2ZA=="
-            className="instagrambesocial"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FontAwesomeIcon icon={faInstagram} />
-          </a>
-          <ReactWhatsapp
-            number="+40 0763098807"
-            className="whatsappsocial"
-            message="Salut, doresc o programare!"
-          >
-            <FontAwesomeIcon
-              icon={faWhatsapp}
-              bounce
-              style={{ color: "#075e54" }}
-              size="2x"
-            />
-          </ReactWhatsapp>
-        </div>
-      </nav>
-    </header>
+          <div className={`nav ${isMenuOpen ? "active" : ""}`}>
+            <button id="navToggleBtn" className="nav-toggle" onClick={toggleMenu}>
+              <div className="bar"></div>
+              <div className="bar"></div>
+              <div className="bar"></div>
+              <div className="bar"></div>
+            </button>
+
+            <div className="nav-items">
+  <Link to="#" className="disabled-link">Upgrade / Retrofit</Link>
+  <Link to="#" className="disabled-link">Smart Key LCD</Link>
+  <Link to="#" className="disabled-link">Reparații Chei Auto</Link>
+  <Link
+    to="#"
+    className="contact-link"
+    onClick={() => (window.location.href = "tel:+40762961548")}
+  >
+    Contact
+    <span className="tooltip">📞 Nr. Telefon: +40762961548</span>
+  </Link>
+</div>
+
+          </div>
+
+          <div className="social-container">
+            <a
+              href="https://www.facebook.com/CheiAutoSolutionTimisoara/"
+              className="facebookbesocial"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FontAwesomeIcon icon={faFacebook} />
+            </a>
+            <a
+              href="https://www.instagram.com/radevici_andrija?utm_source=ig_web_button_share_sheet&igsh=OGQ5ZDc2ODk2ZA=="
+              className="facebooksocial"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FontAwesomeIcon icon={faInstagram} />
+            </a>
+            <a
+              href="https://www.tiktok.com/@chei.auto.solution.tm"
+              className="instagrambesocial"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FontAwesomeIcon icon={faTiktok} />
+            </a>
+          </div>
+
+          <div className="navbar-shadow"></div>
+        </nav>
+      </header>
+
+      {/* WhatsApp Floating Button */}
+      <div className="whatsapp-floating">
+        <a
+          href="https://wa.me/40762961548?text=Salut!%20Mulțumim%20că%20ai%20contactat%20Car%20Key%20Solution%20Timișoara!%20Spune-ne%20cum%20te%20putem%20ajuta%3F🚗🔑"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="whatsappsocial"
+          aria-label="Scrie-ne pe WhatsApp"
+        >
+          <>
+            <FontAwesomeIcon icon={faWhatsapp} size="2x" />
+            <span className="whatsapp-help-text">Ai nevoie de ajutor?</span>
+          </>
+        </a>
+      </div>
+    </>
   );
 };
 
